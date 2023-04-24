@@ -14,10 +14,17 @@ const canSwim = {
   },
 };
 
+const canTalk = {
+  talk: () => {
+    console.log('talking');
+  },
+};
+
 const Person = function () {};
+const DisabledPerson = function () {};
 
 mixin(Person, canWalk, canSwim);
+mixin(DisabledPerson, canTalk);
 
 const p = new Person();
-
-console.log(p);
+const dp = new DisabledPerson();
